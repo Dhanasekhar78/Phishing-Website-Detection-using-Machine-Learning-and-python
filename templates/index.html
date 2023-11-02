@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+     <title>PWM projects</title>
+      <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.css" rel="stylesheet" />
+    <link href="static/styles21.css" rel="stylesheet">
+    
+
+
+</head>
+
+<body class="home">
+    <nav class="navbar navbar-dark fixed-top  navbar-expand-lg home">
+        <a href="#" class="navbar-brand px-5 p-2">Pulse Width Modulation<span class="text-success px-3">PWM</span></a>
+    </nav>
+
+ <div class="container-lg mt-5 header home">
+    <h2 class="text-center text-white text-light p-4">About the project</h2>
+    <p class="text-center text-muted">Phishing attacks are a prevalent technique used 
+        by online scammers to obtain sensitive information from 
+        unsuspecting users. Detecting phishing websites is crucial 
+        to protecting users from these attacks. In this project, we 
+        propose a machine learning approach for identifying 
+        phishing URLs</p>
+ 
+ </div>
+ <div class=" container-lg text-center mt-5 home">
+    
+
+    <h2 class="text-cneter text-white">URL</h2>
+  
+       <div class="form-group">
+        <form action="/" method ="post">
+        <input type="text" class="search bg-white textbox" name ='url' id="url" placeholder="Enter URL" required ><br>
+
+        <button class="button btn btn-success mt-5" role="button" >Check here</button>
+    </form>
+        </div>
+</div>
+
+
+<div class="container-lg text-center mt-4">  
+    <div class="form-group">
+        
+        <br>
+        <a href= {{ url }} target="_blank"><h4>{{url}}</h4></a>
+           
+        <br>
+        <h3 id="prediction"></h3>
+        <button class="button2" id="button2" role="button" onclick="window.open('{{url}}')" target="_blank" >Still want to Continue</button>
+        <button class="button1" id="button1" role="button"  onclick="window.open('{{url}}')" target="_blank">Continue</button>
+    </div> 
+</div>
+
+<br><br>
+
+    
+    <script >
+        
+            let x = '{{xx}}';
+            let num = x*100;
+            if (0<=x && x<0.50){
+                num = 100-num;
+            }
+            let txtx = num.toString();
+            if(x<=1 && x>=0.50){
+                var label = "Website is "+txtx +"% safe to use...";
+
+                document.getElementById("prediction").innerHTML = label;
+
+                document.getElementById("button1").style.display="block";
+            }
+            else if (0<=x && x<0.50){
+                var label = "Website is "+txtx +"% unsafe to use..."
+                document.getElementById("prediction").innerHTML = label ;
+                document.getElementById("button2").style.display="block";
+            }
+        
+    </script>
+
+
+
+
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.2/mdb.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(window).scroll(function () {
+          var scroll = $(window).scrollTop();
+          if (scroll > 100) { // Adjust the scroll threshold as needed
+            $(".navbar").addClass("scrolled-navbar");
+          } else {
+            $(".navbar").removeClass("scrolled-navbar");
+          }
+        });
+      });
+    </script>
+
+<script>
+  $(document).ready(function () {
+    // Add an event listener to the menu items
+    $('.navbar-nav a').on('click', function () {
+      // Check if the menu is open (collapsed)
+      if ($('.navbar-toggler').is(':visible')) {
+        // Close the menu
+        $('.navbar-toggler').click();
+      }
+    });
+  });
+</script>
+
+
+   <!-- Footer -->
+   <footer class=" " id="contact">
+    <!-- Section: Social media -->
+    <section class="justify-content-center justify-content-lg-between p-4 border-bottom "
+      style="background-color: black; width:100%;">
+      <!-- Left -->
+      <div class="me-5 text-muted ms-5 "  >
+        <span>Get connect with me on linkedin by clicking on inkedin icon: </span>
+      </div>
+      <!-- Left -->
+      <!-- Right -->
+      <div class="text-center mt-4 text-success">
+        <a href="https://www.linkedin.com/in/dhanasekharg/" class="me-4 mt-2 text-reset " target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: black; width:100%;">
+      © Developed by <span class="text-success">Dhanasekhar</span>
+
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</body>
+
+
+</html>
+

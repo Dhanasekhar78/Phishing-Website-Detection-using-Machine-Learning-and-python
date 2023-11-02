@@ -1,0 +1,100 @@
+.home{
+  background-color: rgb(56, 53, 51);
+}
+.header{
+  padding-top: 30px;
+}
+.scrolled-navbar {
+  background-color: black !important;
+  transition: black 0.3s ease !important;
+  /* Adjust the transition duration as needed */
+  color: white;
+  padding: 0.2rem;
+}
+.textbox{
+  width:400px;
+  padding:20px;
+  height:20px;
+  border-radius: 20px;
+}
+.button {
+
+	border-radius: 5px;
+  box-sizing: border-box;
+	cursor: pointer;
+  line-height: 28px;
+	transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.button:hover{
+  background-color: white;
+	color:green;
+}
+.button1{
+  appearance: button;
+  background-color: #fff;
+  border: 2px solid green;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: green;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 25px;
+  outline: 2px solid transparent;
+  padding: 10px;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  
+  display: none;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.button1:hover{
+  background-color: green;
+	color: #fff;
+}
+
+.button2{
+  appearance: button;
+  background-color: #fff;
+  border: 2px solid red;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: red;
+  column-gap: 1rem;
+  cursor: pointer;
+  display: flex;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-top: 25px;
+  outline: 2px solid transparent;
+  padding: 10px;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+.button2:hover{
+  background-color:red;
+	color: #fff;
+}
+.form-group{
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+  padding:10px;
+}
